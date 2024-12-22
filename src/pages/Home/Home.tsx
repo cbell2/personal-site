@@ -1,25 +1,21 @@
-import MountainLayer4 from "./SVG_Components/svg_MountainLayer4";
-import MountainLayer3 from "./SVG_Components/svg_MountainLayer3";
-import MountainLayer2 from "./SVG_Components/svg_MountainLayer2";
-import MountainLayer1 from "./SVG_Components/svg_MountainLayer1";
-import MountainLayer0 from "./SVG_Components/svg_MountainLayer0";
+import { motion } from "framer-motion";
+// import MountainLayer4 from "./SVG_Components/svg_PineTree";
+// import MountainLayer3 from "./SVG_Components/svg_MountainLayer3";
+// import MountainLayer2 from "./SVG_Components/svg_MountainLayer2";
+// import MountainLayer1 from "./SVG_Components/svg_MountainLayer1";
+// import MountainLayer0 from "./SVG_Components/svg_MountainLayer0";
 import CloudSVG from "./SVG_Components/svg_Cloud";
+import PineTreeBackground from "./Pine_Tree/PineTreeBackground";
 
 const SkyBackground = () => {
   return (
     <>
       <div className="background">
-        <Title></Title>
+        {/* <Title></Title> */}
         <Sun></Sun>
-        <CloudLayer></CloudLayer>
-        <MountainLayer4 fillColor="#e5a462"></MountainLayer4>
-        <MountainLayer3 fillColor="#d38a60"></MountainLayer3>
-        <MountainLayer2 fillColor="#c37c60"></MountainLayer2>
-        <MountainLayer1
-          fillColor="
-#8b6870"
-        ></MountainLayer1>
-        <MountainLayer0 fillColor="#1e1f27"></MountainLayer0>
+        {/* <CloudLayer></CloudLayer> */}
+        {/* <PineTree fillColor={"red"}></PineTree> */}
+        <PineTreeBackground></PineTreeBackground>
         <Home></Home>
       </div>
     </>
@@ -51,9 +47,9 @@ function CloudLayer() {
   // Randomly generate cloud positions
   for (let i = 0; i < getRandomInt(2, 4); i++) {
     cloudLocationArray.push({
-      left: `${getRandomInt(0, 100)}%`,
-      top: `${getRandomInt(0, 2)}%`,
-      size: `${getRandomInt(100, 150)}rem`,
+      delay: `$getRandomInt(0, 30)s`,
+      top: `${getRandomInt(-20, 2)}%`,
+      size: `${getRandomInt(50, 150)}rem`,
     });
   }
 
@@ -75,12 +71,20 @@ function getRandomInt(min, max) {
 function Cloud({ location }) {
   return (
     <>
-      <div
+      <motion.div
         className="cloud"
-        style={{ left: location.left, top: location.top, width: location.size }}
+        style={{ top: location.top, width: location.size }}
+        animate={{
+          animationDelay: location.delay,
+          x: [0, "-175%"],
+        }}
+        transition={{
+          duration: 100,
+          repeat: Infinity,
+        }}
       >
         <CloudSVG fillColor="#f5c8a4af"></CloudSVG>
-      </div>
+      </motion.div>
     </>
   );
 }
