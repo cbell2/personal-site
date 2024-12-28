@@ -13,10 +13,10 @@ const SkyBackground = () => {
       <div className="background">
         {/* <Title></Title> */}
         <Sun></Sun>
+        <Home></Home>
         {/* <CloudLayer></CloudLayer> */}
         {/* <PineTree fillColor={"red"}></PineTree> */}
         <PineTreeBackground></PineTreeBackground>
-        <Home></Home>
       </div>
     </>
   );
