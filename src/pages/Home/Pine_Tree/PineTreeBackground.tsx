@@ -10,187 +10,218 @@ interface PositionObj {
 interface Size {
   width: string;
   height: string;
-  marginTop?: string; // Needed if the height of the tree is shorter/taller than average
+  marginBottom?: string; // Needed if the height of the tree is shorter/taller than average
 }
 
 interface PineTreeObj {
   position: PositionObj;
   size: Size;
   color: string;
+  filter?: string;
 }
 
 const PINE_TREE_DARK_GREEN = "#344e41";
 
 const pineTreeBackground1: PineTreeObj[] = [
   {
-    position: { x: "-100%", y: "20%", z: "5" },
-    size: { width: "300%", height: "18vw", marginTop: "14vw" },
+    position: { x: "-100%", y: "0%", z: "5" },
+    size: { width: "300%", height: "18vw", marginBottom: "-6vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "-7%", y: "20%", z: "5" },
+    position: { x: "-7%", y: "0%", z: "5" },
     size: { width: "17%", height: "30vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "3%", y: "20%", z: "5" },
-    size: { width: "20%", height: "25vw", marginTop: "5vw" },
+    position: { x: "2%", y: "0%", z: "5" },
+    size: { width: "21%", height: "25vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "13%", y: "20%", z: "5", transform: "scaleX(-1)" },
-    size: { width: "21%", height: "23vw", marginTop: "7vw" },
+    position: { x: "13%", y: "0%", z: "5", transform: "scaleX(-1)" },
+    size: { width: "21%", height: "23vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "28%", y: "20%", z: "5" },
-    size: { width: "14%", height: "40vw", marginTop: "-10vw" },
+    position: { x: "28%", y: "0%", z: "5" },
+    size: { width: "14%", height: "40vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "35%", y: "20%", z: "5", transform: "scaleX(-1)" },
-    size: { width: "17%", height: "28vw", marginTop: "2vw" },
+    position: { x: "35%", y: "0%", z: "5", transform: "scaleX(-1)" },
+    size: { width: "17%", height: "28vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "48%", y: "20%", z: "5", transform: "scaleX(-1)" },
+    position: { x: "48%", y: "0%", z: "5", transform: "scaleX(-1)" },
     size: { width: "17%", height: "30vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "60%", y: "20%", z: "5" },
-    size: { width: "16%", height: "36vw", marginTop: "-6vw" },
+    position: { x: "60%", y: "0%", z: "5" },
+    size: { width: "16%", height: "36vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "70%", y: "20%", z: "5" },
-    size: { width: "17%", height: "29vw", marginTop: "1vw" },
+    position: { x: "69%", y: "0%", z: "5" },
+    size: { width: "19%", height: "29vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "82%", y: "20%", z: "5", transform: "scaleX(-1)" },
-    size: { width: "19%", height: "25vw", marginTop: "5vw" },
+    position: { x: "82%", y: "0%", z: "5", transform: "scaleX(-1)" },
+    size: { width: "19%", height: "25vw", marginBottom: "0vw" },
     color: PINE_TREE_DARK_GREEN,
   },
   {
-    position: { x: "93%", y: "20%", z: "5" },
+    position: { x: "93%", y: "0%", z: "5" },
     size: { width: "17%", height: "30vw" },
     color: PINE_TREE_DARK_GREEN,
   },
 ];
 
 const PINE_TREE_MEDIUM_GREEN = "#597f56";
+// const PINE_TREE_MEDIUM_DIST_FILTER = "blur(.05rem)";
+const PINE_TREE_MEDIUM_DIST_FILTER = "";
 
 const pineTreeBackground2: PineTreeObj[] = [
   {
-    position: { x: "-100%", y: "20%", z: "4" },
-    size: { width: "300%", height: "10vw", marginTop: "7vw" },
+    position: { x: "-100%", y: "0%", z: "4" },
+    size: { width: "300%", height: "12vw", marginBottom: "7vw" },
     color: PINE_TREE_MEDIUM_GREEN,
   },
   {
-    position: { x: "1%", y: "20%", z: "4", transform: "scaleX(-1)" },
-    size: { width: "17%", height: "30vw", marginTop: "-10vw" },
+    position: { x: "1%", y: "0%", z: "4", transform: "scaleX(-1)" },
+    size: { width: "17%", height: "30vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "14%", y: "20%", z: "4" },
-    size: { width: "15%", height: "23vw", marginTop: "-3vw" },
+    position: { x: "14%", y: "0%", z: "4" },
+    size: { width: "15%", height: "23vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "23%", y: "20%", z: "4" },
-    size: { width: "18%", height: "20vw", marginTop: "0vw" },
+    position: { x: "23%", y: "0%", z: "4" },
+    size: { width: "18%", height: "20vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "33%", y: "20%", z: "4", transform: "scaleX(-1)" },
-    size: { width: "18%", height: "32vw", marginTop: "-12vw" },
+    position: { x: "33%", y: "0%", z: "4", transform: "scaleX(-1)" },
+    size: { width: "18%", height: "32vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "43%", y: "20%", z: "4" },
-    size: { width: "17%", height: "28vw", marginTop: "-8vw" },
+    position: { x: "43%", y: "0%", z: "4" },
+    size: { width: "17%", height: "28vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "55%", y: "20%", z: "4", transform: "scaleX(-1)" },
-    size: { width: "17%", height: "30vw", marginTop: "-10vw" },
+    position: { x: "55%", y: "0%", z: "4", transform: "scaleX(-1)" },
+    size: { width: "17%", height: "30vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "63%", y: "20%", z: "4", transform: "scaleX(-1)" },
-    size: { width: "16%", height: "26vw", marginTop: "-6vw" },
+    position: { x: "63%", y: "0%", z: "4", transform: "scaleX(-1)" },
+    size: { width: "16%", height: "26vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "72%", y: "20%", z: "4" },
-    size: { width: "17%", height: "29vw", marginTop: "-9vw" },
+    position: { x: "72%", y: "0%", z: "4" },
+    size: { width: "17%", height: "29vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "81%", y: "20%", z: "4", transform: "scaleX(-1)" },
-    size: { width: "19%", height: "25vw", marginTop: "-5vw" },
+    position: { x: "81%", y: "0%", z: "4", transform: "scaleX(-1)" },
+    size: { width: "19%", height: "25vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
   {
-    position: { x: "90%", y: "20%", z: "4" },
-    size: { width: "17%", height: "15vw", marginTop: "5vw" },
+    position: { x: "90%", y: "0%", z: "4" },
+    size: { width: "17%", height: "15vw", marginBottom: "10vw" },
     color: PINE_TREE_MEDIUM_GREEN,
+    filter: PINE_TREE_MEDIUM_DIST_FILTER,
   },
 ];
 
 const PINE_TREE_LIGHT_GREEN = "#a4ae8b";
+// const PINE_TREE_LONG_DIST_FILTER = "blur(.1rem)";
+const PINE_TREE_LONG_DIST_FILTER = "";
 
 const pineTreeBackground3: PineTreeObj[] = [
   {
-    position: { x: "-5%", y: "20%", z: "3" },
-    size: { width: "17%", height: "30vw", marginTop: "-20vw" },
+    position: { x: "-100%", y: "0%", z: "3" },
+    size: { width: "300%", height: "12vw", marginBottom: "17vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "10%", y: "20%", z: "3", transform: "scaleX(-1)" },
-    size: { width: "15%", height: "23vw", marginTop: "-13vw" },
+    position: { x: "-5%", y: "0%", z: "3" },
+    size: { width: "17%", height: "30vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "18%", y: "20%", z: "3" },
-    size: { width: "18%", height: "20vw", marginTop: "-10vw" },
+    position: { x: "10%", y: "0%", z: "3", transform: "scaleX(-1)" },
+    size: { width: "15%", height: "23vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "30%", y: "20%", z: "3" },
-    size: { width: "18%", height: "30vw", marginTop: "-20vw" },
+    position: { x: "18%", y: "0%", z: "3" },
+    size: { width: "18%", height: "20vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "40%", y: "20%", z: "3", transform: "scaleX(-1)" },
-    size: { width: "17%", height: "22vw", marginTop: "-12vw" },
+    position: { x: "30%", y: "0%", z: "3" },
+    size: { width: "18%", height: "30vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "50%", y: "20%", z: "3" },
-    size: { width: "17%", height: "30vw", marginTop: "-20vw" },
+    position: { x: "40%", y: "0%", z: "3", transform: "scaleX(-1)" },
+    size: { width: "17%", height: "22vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "61%", y: "20%", z: "3", transform: "scaleX(-1)" },
-    size: { width: "16%", height: "26vw", marginTop: "-16vw" },
+    position: { x: "50%", y: "0%", z: "3" },
+    size: { width: "17%", height: "30vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "71%", y: "20%", z: "3", transform: "scaleX(-1)" },
-    size: { width: "13%", height: "29vw", marginTop: "-19vw" },
+    position: { x: "61%", y: "0%", z: "3", transform: "scaleX(-1)" },
+    size: { width: "16%", height: "26vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "79%", y: "20%", z: "3", transform: "scaleX(-1)" },
-    size: { width: "16%", height: "25vw", marginTop: "-15vw" },
+    position: { x: "71%", y: "0%", z: "3", transform: "scaleX(-1)" },
+    size: { width: "13%", height: "29vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
   {
-    position: { x: "88%", y: "20%", z: "3" },
-    size: { width: "18%", height: "18vw", marginTop: "-8vw" },
+    position: { x: "79%", y: "0%", z: "3", transform: "scaleX(-1)" },
+    size: { width: "16%", height: "25vw", marginBottom: "20vw" },
     color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
+  },
+  {
+    position: { x: "88%", y: "0%", z: "3" },
+    size: { width: "18%", height: "18vw", marginBottom: "20vw" },
+    color: PINE_TREE_LIGHT_GREEN,
+    filter: PINE_TREE_LONG_DIST_FILTER,
   },
 ];
 
@@ -210,12 +241,13 @@ function PineTreeBackground() {
             style={{
               position: "absolute",
               left: tree.position.x,
-              top: tree.position.y,
+              bottom: tree.position.y,
               zIndex: tree.position.z,
               width: tree.size.width,
               height: tree.size.height,
-              marginTop: tree.size.marginTop,
+              marginBottom: tree.size.marginBottom,
               transform: tree.position.transform,
+              filter: tree.filter,
             }}
             fillColor={tree.color}
           ></PineTree>
