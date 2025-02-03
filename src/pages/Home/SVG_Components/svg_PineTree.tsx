@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const PineTree = ({ style = {}, fillColor }) => {
   return (
     <div className="pine-tree" style={style}>
@@ -9,10 +11,14 @@ const PineTree = ({ style = {}, fillColor }) => {
         viewBox="0 0 369.000000 661.000000"
         preserveAspectRatio="none"
       >
-        <g
+        <motion.g
           transform="translate(0.000000,661.000000) scale(0.100000,-0.100000)"
           fill={fillColor}
           stroke="none"
+          animate={{
+            fill: fillColor,
+          }}
+          transition={{ duration: 10, ease: "easeInOut" }}
         >
           <path
             d="M1795 6601 c-42 -9 -54 -51 -54 -201 -1 -127 -23 -314 -40 -334 -5
@@ -102,7 +108,7 @@ const PineTree = ({ style = {}, fillColor }) => {
 -7 14 -21 41 -31 61 -10 20 -30 74 -45 120 -14 46 -32 95 -39 109 -8 14 -24
 72 -37 130 -29 136 -29 135 -94 121z"
           />
-        </g>
+        </motion.g>
       </svg>
     </div>
   );

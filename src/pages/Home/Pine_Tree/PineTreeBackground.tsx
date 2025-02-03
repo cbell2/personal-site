@@ -231,7 +231,13 @@ const pineTreeBackground: PineTreeObj[] = [
   ...pineTreeBackground3,
 ];
 
-function PineTreeBackground() {
+interface PineTreeBackgroundProps {
+  pineTreeStyling: [{ color: string }, { color: string }, { color: string }];
+}
+
+const PineTreeBackground: React.FC<PineTreeBackgroundProps> = ({
+  pineTreeStyling,
+}) => {
   return (
     <>
       <div>
@@ -249,12 +255,14 @@ function PineTreeBackground() {
               transform: tree.position.transform,
               filter: tree.filter,
             }}
-            fillColor={tree.color}
+            fillColor={
+              pineTreeStyling[Number(tree.position.z) - 3]?.color || tree.color
+            }
           ></PineTree>
         ))}
       </div>
     </>
   );
-}
+};
 
 export default PineTreeBackground;

@@ -9,13 +9,14 @@
 
 .sun {
     background: #f2decb;
-    width: 40rem;
-    height: 40rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 40rem;
     position: fixed;
     z-index: -2;
     left: 50%;
-    transform: translate(-50%, 0);
+    bottom: -30vh;
+    // transform: translate(-50%, 0);
 }
 
 .cloud {
